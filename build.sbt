@@ -39,10 +39,3 @@ lazy val slickCodeGenTask = Def.task {
   val fname = outputDir
   Seq(file(fname))
 }
-/*
-lazy val slickCodeGenTask = (sourceDirectory, fullClasspath in Compile, runner in Compile, streams) map { (dir, cp, r, s) =>
-  val outputDir = (dir / "main/scala").getPath
-  val fileName = outputDir + "/org/red/db/models/KillmailScraper.scala"
-  toError(r.run("org.red.SlickCodegen.CustomCodeGen", cp.files, Array(outputDir), s.log))
-  Seq(file(fileName))
-}*/
